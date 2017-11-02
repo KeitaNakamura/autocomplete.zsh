@@ -1,9 +1,8 @@
-# Created by K.Nakamura on 2016-05-16.
-# e-mail: nakamura-keita-kn@ynu.jp
-
 zle -N self-insert zcomplete-self-insert
 zle -N expand-or-complete zcomplete-expand-or-complete
 zle -N backward-delete-char zcomplete-backward-delete-char
+
+LISTMAX=0
 
 zcomplete-limit-list() {
   if (( compstate[list_lines]+BUFFERLINES > LINES ||
